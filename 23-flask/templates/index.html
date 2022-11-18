@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>INICIO</title>
+    </head>
+    <body>
+        <h1>APRENDIENDO FLASK CON FERNANDO</h1>
+        <hr/>
+        <ul>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a href="/informacion/fernando/baculima/35">Información</a>
+            </li>
+            <li>
+                <a href="{{ url_for('contacto') }}">Contacto</a>
+            </li>
+            <li>
+                <a href="{{ url_for('lenguajes') }}">Lenguajes</a>
+            </li>
+            <li>
+                <a href="{{ url_for('nosotros') }}">Nosotros</a>
+            </li>
+        </ul>
+        <hr/>
+    </body>
+
+</html>

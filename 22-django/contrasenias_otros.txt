@@ -1,0 +1,18 @@
+primero con python3 manage.py startproject
+para crear una app python3 manage.py startapp
+
+
+creado con el comando: python3 manage.py createsuperuser
+super user: abac
+pass: abac2019
+
+para correr el server:
+python3 manage.py runserver
+
+
+para crear las tablas a partir de los modelos, se ejecuta el proceso de migraciones
+
+
+desde el panel de admin de djando, se puede crear el crud para modelos creados en código fuente
+
+meta clas django, para personalizar el modelo, que aparezca el nombre en singuylar o plural, etc.

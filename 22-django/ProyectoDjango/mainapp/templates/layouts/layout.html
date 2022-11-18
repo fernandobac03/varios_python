@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {% block title %}
+                <!--titulo de cada página-->
+
+            {% endblock %}
+            -- Fernando Baculima
+        </title>
+        {% load static %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    </head>
+    <body>
+        <!-- Cabecera de la página -->
+        <header>
+            <div id="logotipo">
+                <!-- Aquí un logotipo-->
+                <img src="{% static 'images/logo5.svg'%}">
+                <h1>KDsolutions </h1>
+            </div>
+            
+        </header>
+
+        <!--FUNCIONA, PERO abajo se muestra una nueva forma de rutas
+        <nav>
+            <ul>
+                <li>
+                    <a href="/inicio">Inicio</a>
+                </li>
+                <li>
+                    <a href="/hola-mundo">hola Mundo</a>
+                </li>
+                <li>
+                    <a href="/pagina-pruebas">Página de Pruebas</a>
+                </li>
+                <li>
+                    <a href="/contacto">Contacto</a>
+                </li>
+                <li>
+                    <a href="/template">Template</a>
+                </li>
+            </ul>
+        </nav>
+        -->
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'inicio' %}">INICIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %} ">SOBRE NOSOTROS</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="barra">
+            <span class="esquina-izquierda"></span>
+            <span class="relleno-barra"></span>
+            <span class="esquina-derecha"></span>
+        </div>
+        <div id="content">
+            <div class="box">
+                {% block content %}
+                    <!-- código que biene de templates -->
+                    <strong>Contenido del Bloque Original</strong>
+                {% endblock %}
+            </div>
+        </div>
+
+    <footer>
+        KDsolutions - Derechos reservados 2022
+        {% now "y-m-d--h:m:s" %}
+    </footer>
+    </body>
+</html>

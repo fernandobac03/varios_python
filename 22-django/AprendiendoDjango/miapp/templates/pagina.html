@@ -1,0 +1,37 @@
+
+{% extends 'layout.html' %}
+
+{% block title %}
+    Mí Página de Prueba
+{% endblock %}
+
+{% block content %}
+    <h1 class="title">Página de mi Web</h1>
+    <p>{{ "Creado por Fernando Baculima" }}</p>
+    <!--FILTROS EN TEMPLATES-->
+    <p>{{ "Creado por Fernando Baculima"|cut:" " }}</p>
+    <p>{{ "Creado por Fernando Baculima"|cut:"o" }}</p>
+
+<!--
+    Un valor por defecto a una variable, en caso que venga vacía
+    <p>{{ mi_variable|default:"No hay datos" }}</p>
+
+    Listas
+    <p>{{ mi_variable|first }}</p>
+    <p>{{ mi_variable|last }}</p>
+    <p>{{ mi_variable|join:"," }}</p>
+    <p>{{ mi_variable|length }}</p>
+
+
+    Textos
+    <p>{{ mi_variable|length }}</p>
+    <p>{{ "texto prueba"|upper }}</p>
+    <p>{{ "TextO PruebAs"|lower }}</p>
+        <p>{{ "TextO PruebAs"|wordcount }}</p>
+    -->
+
+<h1>Utilizando FILTROS CREADOS MANUALMENTE, lanzó en error al importar django, revisar</h1>
+
+
+
+{% endblock %}

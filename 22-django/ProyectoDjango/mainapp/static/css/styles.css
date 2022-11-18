@@ -1,0 +1,281 @@
+/* Estilos Generales */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif, arial, "Helvetica Neue";
+}
+
+.box p, .box h2, .box h3, .box ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.box ul, .box ol{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+body{
+    background: #FFFFFF;
+}
+
+/* Estilos cabecera */
+header{
+    width: 1212px;
+    height: 140px;
+    background-color: #00B2FF;
+    margin: 0px auto;
+}
+#logotipo{
+    width: 80%;
+    height: 140px;
+    margin: 0px auto;
+    padding-top: 10px;
+
+}
+
+#logotipo img{
+    display: block;
+    width: 200px;
+    float: left;
+    margin-top: 20px;
+
+}
+
+#logotipo h1{
+    display: block;
+    float: left;
+    margin-top: 40px;
+    margin-left: 80px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #FFFFFF;
+
+}
+
+/* Estilos Barra Navegación */
+nav{
+    width: 1250px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #81D5F9;
+    border: 1px;
+    box-shadow: 0px 22px 22px #00B2FF; /*efecto sombra*/
+    font-size: 18px;
+}
+
+nav ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li{
+    line-height: 40px;
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+}
+
+nav ul li a:hover{
+    background: #00B2FF;
+    box-shadow: 0px 0px 5px #FFFFFF inset;
+    color: white;
+    transition: all 400ms;
+}
+
+.barra{
+    width: 1250px;
+    margin:  0 auto;
+
+}
+ .esquina-izquierda{
+     display: block;
+     border-left: 30px solid transparent;
+     border-top: 10px solid #2B2F30;
+     float: left;
+ }
+
+  .esquina-derecha{
+     display: block;
+     border-right: 30px solid transparent;
+     border-top: 10px solid #2B2F30;
+      float: right;
+
+ }
+
+  .relleno-barra{
+      display: block;
+      width: 1190px;
+      height: 10px;
+      background: #2B2F30;
+      float: left;
+  }
+
+  /* Estilos contenido central */
+
+#content{
+    width: 1190px;
+    min-height: 930px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+
+
+}
+
+.box{
+    background: aliceblue;
+    margin: 0 auto;
+    width: 95%;
+    min-height: 930px;
+    padding: 20px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+}
+
+.box form{
+    width: 50%;
+
+}
+
+.box form input,
+.box form label,
+.box form select{
+    display: block;
+    padding: 10px;
+    padding-left: 0px;
+}
+
+.box form select{
+    width: 100px;
+    padding: 10px;
+}
+
+
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button{
+    padding: 10px;
+    margin-top: 15px;
+    background: #00B2FF;
+    border: 1px solid #444;
+    color: white;
+    transition: 300ms all;
+
+}
+
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #81D5F9;
+    transition: 300ms all;
+}
+
+
+.box form input[type="text"],
+.box form textarea{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+.title{
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.article-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    clear: both;
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+.article-item .image{
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+}
+
+.article-item span.date{
+    display: block;
+    font-size: 15px;
+    color: #00B2FF;
+    margin-bottom: 10px;
+}
+.btn{
+    display: block;
+    padding: 10px;
+    background: chocolate;
+    color:white;
+    border: 1px solid black;
+    margin-top: 20px;
+    width: 100px;
+    text-align: center;
+
+}
+
+.article-item .image img{
+    width: 200px;
+    height: 200px;
+}
+
+.article-item .data{
+    float: left;
+    padding: 15px;
+    padding-top: 0px;
+
+}
+.article-item h2{
+    font-size: 25px;
+    color: #333333;
+}
+
+footer{
+    width: 1250px;
+    background-color: #1B1E1F;
+    border: 1px solid #333;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 20px gray;
+
+
+}
+
+.rojo {
+    color: red;
+    text-shadow: 0px 0px 1px black;
+
+}
+
+.message{
+    padding: 20px;
+    background: chocolate;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 10px;
+
+}

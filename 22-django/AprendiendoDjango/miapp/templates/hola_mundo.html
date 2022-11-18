@@ -1,0 +1,14 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    MI HOLA MUNDO
+{% endblock %}
+
+<!--Si tengo contenido en el tag content en layout.html, este se reemplaza por lo que coloqué aquí, en la vista.html-->
+<!--Entonces, si es posible heredar el contenido del layout padre, y evitar que se reemplace con {{ block.super }}-->
+
+{% block content %}
+    {{ block.super }}
+    <h1 class="title">MI PAGINA HOLA MUNDO con Django</h1>
+    <h2>Fernando Baculima</h2>
+{% endblock%}

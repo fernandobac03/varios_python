@@ -1,0 +1,66 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    {{ titulo }}
+{% endblock %}
+
+{% block content %}
+    <!-- Esto es un comentario en HTML-->    <!-- Este comentario si se visualiza en el modo desarrollador del navegador-->
+    {% comment 'Esto es un comentario' %}
+        <h1>Este comentario no se visualizará en el source del modo desarrollador del navegador</h1>
+        <h1>Nota de comentario</h1>
+    {% endcomment %}
+
+    <h1 class="title">{{ titulo }}</h1>
+
+    {% comment 'Esta variable viene desde la vista views.py'%}
+    {% endcomment %}
+
+    <!--#Condicionales-->
+    {% if mi_variable %}
+        <strong>El nombre SI existe</strong>
+        <p>{{ mi_variable }}</p>
+    {% else %}
+        <strong>El nombre no existe</strong>
+    {% endif %}
+
+    <!-- BUBLES -->
+    {% if lenguajes %}
+        <strong>Listado recibido de Lenguajes de programación</strong>
+        <p>{{ lenguajes }}</p>
+    {% endif %}
+
+    <strong>Recorriendo el listado de Lenguajes de Programación</strong>
+    <ul>
+        {% for lenguaje in lenguajes %}
+            <li>{{lenguaje}}  {{forloop.first}} {{forloop.last}} {{forloop.counter0}} {{forloop.counter}} {{forloop.revcounter}}</li>
+        {% empty %}<!-- Si la lista está vacío, entonces muestra el siguiente mensaje-->
+            <p>NO HAY LENGUAJES QUE MOSTRAR</p>
+        {% endfor %}
+    </ul>
+
+
+
+<!--Ejercicio de recorrido de años hasta 2050, solo anios pares-->
+    <ul>
+        {% for year in years %}
+            {% if year|divisibleby:2 == True %}
+                <li>{{ year }}</li>
+            {% endif %}
+        {% endfor %}
+
+    </ul>
+
+
+<!-- Incluyendo otra plantilla, fecha_actual.html-->
+{% include 'fecha_actual.html' with otra_variable='ESTE ES OTRO DATO DE UNA VARIABLE PASADA AL INCLUDE CON EL COMANDO WITH' %}<!--Si al final coloco el comando ONLY, ya no considerará las otras
+variables de esta plantilla en la plantilla fecha_actual.html-->
+
+
+
+    <p>Descripción escrita en el template index</p>
+
+
+
+
+{% endblock %}
